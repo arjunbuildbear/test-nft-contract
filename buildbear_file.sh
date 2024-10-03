@@ -18,10 +18,6 @@ fi
 echo "Installing dependencies..."
 forge install
 
-# Step 2: Build all packages in the monorepo
-echo "Building all packages..."
-forge build
-
 
 forge script script/DeployMarket.s.sol --rpc-url "$BUILDBEAR_RPC_URL" --mnemonics "$MNEMONIC" --broadcast --slow
 
