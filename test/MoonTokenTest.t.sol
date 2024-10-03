@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "forge-std/Test.sol";
-import "../src/ERC20.sol"; // Adjust the path to your MoonToken contract
+import "../src/ERC20.sol"; 
 
 contract MoonTokenTest is Test {
     MoonToken moonToken;
