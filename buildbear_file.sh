@@ -15,8 +15,6 @@ if [ -z "$MNEMONIC" ]; then
 fi
 
 # Step 1: Install all necessary dependencies using pnpm
-echo "Installing dependencies..."
-forge install
 
 
 forge script script/DeployMarket.s.sol --rpc-url "$BUILDBEAR_RPC_URL" --mnemonics "$MNEMONIC" --broadcast --slow
