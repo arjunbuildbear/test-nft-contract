@@ -1,0 +1,38 @@
+name: Test My Action
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Show Forge version
+        run: forge --version
+
+      - name: Run bb_action_ci
+        uses: arjunbuildbear/test2@21
+        with: 
+          network: |
+            [
+              {
+                "chainId": 1,
+                "blockNumber": 20814270
+              },
+              {
+                "chainId": 137,
+                "blockNumber": 63391559
+              }
+            ]
+          deployCmd: "make exe"
+          buildbear_token: "BB"
