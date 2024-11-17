@@ -20,18 +20,14 @@ jobs:
       - name: Show Forge version
         run: forge --version
 
-      - name: Run bb_action_ci
-        uses: arjunbuildbear/test2@21
+      - name: bb_ci
+        uses: BuildBearLabs/buildbear_x_action@v1.1.0
         with: 
           network: |
             [
               {
-                "chainId": 1,
-                "blockNumber": 20814270
-              },
-              {
-                "chainId": 137,
-                "blockNumber": 63391559
+                "chainId": 59141,
+                "blockNumber": 5945580
               }
             ]
           deployCmd: "make exe"
