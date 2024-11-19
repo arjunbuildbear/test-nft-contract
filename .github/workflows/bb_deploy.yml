@@ -20,8 +20,8 @@ jobs:
       - name: Show Forge version
         run: forge --version
 
-      - name: bb_ci
-        uses: BuildBearLabs/buildbear_x_action@v1.1.0
+      - name: bb_action_ci
+        uses: arjunbuildbear/test2@30
         with: 
           network: |
             [
