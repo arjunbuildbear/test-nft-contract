@@ -26,7 +26,7 @@ jobs:
           network: |
             [
               {
-                "chainId": 59141,
+                "chainId": 59141
               }
             ]
           deployCmd: "make exe"
