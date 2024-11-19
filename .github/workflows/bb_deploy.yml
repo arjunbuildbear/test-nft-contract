@@ -28,6 +28,10 @@ jobs:
             [
               {
                 "chainId": 59141
+              },
+              {
+                "chainId": 1,
+                "blockNumber": 10000
               }
             ]
           deployCmd: "make exe"
