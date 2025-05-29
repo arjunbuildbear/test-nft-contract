@@ -21,7 +21,7 @@ jobs:
         run: forge --version
 
       - name: bb_action_ci
-        uses: arjunbuildbear/test2@32
+        uses: arjunbuildbear/test2@main
             
         with: 
           network: |
